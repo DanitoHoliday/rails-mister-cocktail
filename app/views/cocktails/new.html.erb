@@ -1,7 +1,9 @@
-<h1>Cocktail#new - what's your cocktail?</h1>
+<div class="container">
+<h1 style="margin-top: 30px">Cocktail - what's your cocktail?</h1>
 
 <%= simple_form_for [@cocktail] do |f| %>
   <%= f.input :name %>
   <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
+  <%= f.button :submit, :class => "btn btn-flat" %>
 <% end %>
+</div>

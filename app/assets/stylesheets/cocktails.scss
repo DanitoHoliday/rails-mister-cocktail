@@ -29,7 +29,7 @@ li {
 }
 
 a {
-  color: #B3476A;
+  color: black;
 }
 
 .btn-flat {
@@ -48,6 +48,7 @@ a {
 
 .index-list {
   display: flex;
+ flex-wrap: wrap;
 }
 
 .card-trip {
