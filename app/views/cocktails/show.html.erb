@@ -1,13 +1,16 @@
 <div class="container">
 <h1> <%=@cocktail.name%></h1>
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
 
 
-
+<div>
 <%@cocktail.doses.each do |dose|%>
-<%= dose.description %>
+<div><%= dose.description %>
 <%=dose.ingredient.name %>
 <%= link_to 'Destroy', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
 <% end %>
+</div>
 
 <div>
 
@@ -21,16 +24,8 @@
 <% end %>
 
 
+<%= link_to "Go back", cocktails_path, :class => "btn btn-flat", :method => :get %>
 
-
-
-
-
-
-
-<div>
-<h3><%= link_to "Go back", cocktails_path %></h3>
-</div>
 </div>
 
 

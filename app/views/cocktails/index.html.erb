@@ -1,10 +1,32 @@
-<h1>Cocktails#index - all cocktails</h1>
+<div class="container">
 
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1453825012366-3738046cb6c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);">
+  <div>
+  <div>
+    <h1>Cocktails9000</h1>
+    <p>Find the best cocktails to get wasted with class</p>
+    <%= button_to "Create a new cocktail", new_cocktail_path,
+      :class => "btn btn-flat", :method => :get %>
+  </div>
+</div>
+
+<div>
+    <ul class="index-list">
 <% @cocktails.each do |cocktail| %>
-  <ul>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-    <%= link_to "Delete this cocktail", cocktail_path(cocktail), method: :delete %>
-  </ul>
+
+    <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <li><h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2></li>
+      <%= link_to "Delete this cocktail", cocktail_path(cocktail), method: :delete %>
+    </div>
+
 <% end %>
 
-  <%= link_to 'Make a new cocktail', new_cocktail_path %>
+  </ul>
+
+</div>
+
+</div>
+
+
+

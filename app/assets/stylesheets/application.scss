@@ -11,3 +11,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "cocktails";
+@import "doses";
+
+body {
+   background: rgb(2,0,36);
+   color: white;
+}
