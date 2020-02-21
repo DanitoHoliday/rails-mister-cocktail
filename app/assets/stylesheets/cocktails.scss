@@ -29,7 +29,7 @@ li {
 }
 
 a {
-  color: black;
+  color: #B3476A;
 }
 
 .btn-flat {
@@ -76,18 +76,34 @@ a {
   margin: 0;
 }
 
+#card-text {
+  display:flex;
+}
 
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+#trash {
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+#card-title {
+  padding: 7px;
+}
+
+#trash-show-big {
+  width: 50px;
+  height: 50px;
+}
+
+.doses {
+  display: flex;
+}
+
+.show-header {
+  display: flex;
+}
+
+img {
+  border-radius: 10px;
 }
