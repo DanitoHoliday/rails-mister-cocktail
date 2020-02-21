@@ -6,6 +6,7 @@
 <%@cocktail.doses.each do |dose|%>
 <%= dose.description %>
 <%=dose.ingredient.name %>
+<%= link_to 'Destroy', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
 <div>
@@ -17,7 +18,6 @@
   <%= f.input :description %>
   <%= f.association :ingredient %>
   <%= f.button :submit %>
-  <%= link_to 'Destroy', cocktails_path(), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
 
