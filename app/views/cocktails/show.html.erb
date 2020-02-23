@@ -1,14 +1,17 @@
 <div class="container">
 <h1 style="margin-top: 30px"> <%=@cocktail.name%></h1>
 
+<% unless @cocktail.photo.attached? == false %> %>
 <div class="show-header">
   <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
   <ul class="doses">
-<%@cocktail.doses.each do |dose|%>
-<li><h3 style="color: white"><%= dose.description%>
-<%=dose.ingredient.name %></h3>
-<%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } do %>
-<img id="trash-show-big" src="https://img.icons8.com/cotton/64/000000/trash.png">
+<% end %>
+
+  <%@cocktail.doses.each do |dose|%>
+  <li><h3 style="color: white"><%= dose.description%>
+  <%=dose.ingredient.name %></h3>
+  <%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } do %>
+  <img id="trash-show-big" src="https://img.icons8.com/cotton/64/000000/trash.png">
 <%end%>
 </li>
 <% end %>

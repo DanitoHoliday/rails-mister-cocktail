@@ -10,6 +10,7 @@
     <ul class="index-list">
 <% @cocktails.each do |cocktail| %>
 
+<% unless cocktail.photo.attached? == false %>
     <div class="card-trip">
       <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
       <li id="card-text"><h2 id="card-title"><%= link_to cocktail.name, cocktail_path(cocktail)%></h2>
@@ -20,6 +21,7 @@
 
 
     </div>
+<% end %>
 
 
 <% end %>
