@@ -5,7 +5,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 20px 0;
 }
 
 .banner h1 {
@@ -57,12 +57,15 @@ a {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
   margin: 10px;
+  position: static;
+  width: 200px;
 }
 
 .card-trip > img {
-  height: 200px;
+  height: 220px;
   width: 200px;
   object-fit: cover;
+  border-radius: 0;
 }
 
 .card-trip h2 {
@@ -79,13 +82,15 @@ a {
 
 #card-text {
   display:flex;
+  background-color: white;
 }
 
 #trash {
-  width: 20px;
-  height: 20px;
-  margin-left: 30px;
-  position: relative;
+    width: 20px;
+    height: 20px;
+    margin-left: 176px;
+    position: relative;
+    top: -35px;
 }
 
 #card-title {
@@ -108,3 +113,40 @@ a {
 img {
   border-radius: 10px;
 }
+
+.mainbutton {
+  margin-left: 40px;
+  margin-top: 0;
+}
+
+#headline {
+  margin: 40px;
+  color: #1BCB7F;
+}
+
+/* [1] The container */
+.img-hover-zoom {
+  // height: 300px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .8s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+.rating {
+    position: relative;
+    right: 190px;
+    top: -3px;
+    color: #1EDD88;
+        margin-top: 264px;
+    margin-left: -11px;
+}
+
+

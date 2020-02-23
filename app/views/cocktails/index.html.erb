@@ -1,6 +1,7 @@
 <div class="container">
-<h1>Cocktail9000</h1>
-<%= link_to "Create your cocktail", new_cocktail_path, :class => "btn btn-flat", :method => :get %>
+<h1 id="headline"> <strong>Cocktail9000</strong></h1>
+<h2 style="margin: 40px">Find the greatest drinks to get wasted with class. <br> Or show us yours.</h2>
+<%= link_to "Create your cocktail", new_cocktail_path, :class => "btn btn-flat mainbutton", :method => :get %>
 <div class="banner">
   <div>
 
@@ -11,17 +12,16 @@
 <% @cocktails.each do |cocktail| %>
 
 <% unless cocktail.photo.attached? == false %>
-    <div class="card-trip">
+    <div class="card-trip img-hover-zoom">
       <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
       <li id="card-text"><h2 id="card-title"><%= link_to cocktail.name, cocktail_path(cocktail)%></h2>
-       <%= link_to cocktail_path(cocktail), method: :delete do %>
-      <img id="trash" src="https://img.icons8.com/cotton/64/000000/trash.png">
       <%end%>
       </li>
-
-
-    </div>
+      <%= link_to cocktail_path(cocktail), method: :delete do %>
+      <img id="trash" src="https://img.icons8.com/cotton/64/000000/trash.png">
+  </div>
 <% end %>
+    <i class="fas fa-glass-martini-alt rating"></i>
 
 
 <% end %>
